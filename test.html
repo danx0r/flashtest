@@ -1,5 +1,9 @@
 <html>
     test js/as3 interface
-    <embed src="hello.swf" width="600" height="450">
+    <embed id="flash_example" src="hello.swf" width="600" height="450">
     </embed>
+    <script>
+        var flsh = document.getElementById("flash_example");
+        console.log("flash:", flsh);
+    </script>
 </html>
