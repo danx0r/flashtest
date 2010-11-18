@@ -14,7 +14,7 @@ package {
             mytextfield.height = 30;
             mytextfield.text = "Goodbye, crool world! I have known thee well.";
             addChild(mytextfield);
-			ExternalInterface.addCallback("callFlash", this.calledFromJS);
+			ExternalInterface.addCallback("callFlash", calledFromJS);
         }
     }
 }

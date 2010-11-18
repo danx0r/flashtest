@@ -1,9 +1,22 @@
 <html>
-    test js/as3 interface
-    <embed id="flash_example" src="hello.swf" width="600" height="450">
+    test js/as3 interface<!--
+    <embed id="flash_example" name="flash_example" src="hello.swf" width="600" height="450">
     </embed>
+    -->
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="hello" width="500" height="375" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+        <param name="movie" value="hello.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#869ca7" /><param name="allowScriptAccess" value="sameDomain" />
+        <embed src="hello.swf" quality="high" bgcolor="#869ca7" width="500" height="375" name="hello" align="middle" play="true" loop="false" quality="high" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+        </embed>
+    </object>
+    <button onclick="callFlash()">
+        go!
+    </button>
     <script>
-        var flsh = document.getElementById("flash_example");
-        console.log("flash:", flsh);
+        function callFlash(){
+            console.log("doc:", document);
+            var flsh = document["hello"];
+            console.log("flash:", flsh);
+            flsh.callFlash();
+        }
     </script>
 </html>
